@@ -10,7 +10,7 @@ const {validateregister, validateLogin} = require('../utils/validate.js');
 
 // Registration function
 exports.register = async (req, res) => {
-    const validationResult = validateregister(req.body); // Validate registration data
+    const validationResult = validateRegistor(req.body); // Validate registration data
     if (!validationResult.valid) { // If validation fails, return error message
         return res.status(400).json({ message: validationResult.message });
     }
